@@ -3,7 +3,6 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1">
-    <!-- <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <meta name="description" content="결혼 준비를 위한 스몰, 셀프, 웨딩 플래너 매칭 서비스">
@@ -13,6 +12,57 @@
     <meta property="og:title" content="메리유">
     <meta property="og:url" content="http://www.maryyou.co.kr">
     <meta property="og:description" content="결혼 준비를 위한 스몰, 셀프, 웨딩 플래너 매칭 서비스">
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window,
+            document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1757258454536415');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1757258454536415&ev=PageView&noscript=1" /></noscript>
+    <!-- DO NOT MODIFY -->
+    <!-- End Facebook Pixel Code -->
+
+    <!-- START GA -->
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-80861889-5', 'auto');
+        ga('send', 'pageview');
+
+        function sendGaEvent(s, e, c, a, l) {
+            ga(s, e, c, a, l);
+            alert("준비중입니다");
+        };
+    </script>
+    <!-- END GA -->
 
     <meta name="application-name" content="메리유">
 
@@ -106,12 +156,12 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">앱 다운로드<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">iOS</a></li>
+                            <li onclick="javascript:sendGaEvent('send','event','Downloads','ios','nav');"><a href="#">iOS</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="#">Android</a></li>
+                            <li onclick="javascript:sendGaEvent('send','event','Downloads','android','nav')"><a href="#">Android</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">고객문의</a></li>
+                    <li><a href="faq_user.html">고객문의</a></li>
                     <li><a href="#contact">제휴문의</a></li>
                 </ul>
             </div>
@@ -143,8 +193,8 @@
                             <br>결혼, 최고의 순간을 위한 선택의 시작<br /></h2>
                             <h4 class="intro">국내 최대 웨딩컨설턴트 매칭 서비스, 메리유</h4>
 
-                            <a href="#" target="_blank"></a><img src="assets/images/app_store_badge.png" alt=""></a>
-                            <a href="#" target="_blank"><img src="assets/images/play_store_badge.png" alt=""></a>
+                            <a href="#" target="_blank"><img src="assets/images/app_store_badge.png" onclick="javascript:sendGaEvent('send','event','Downloads','ios','header')"></a>
+                            <a href="#" target="_blank"><img src="assets/images/play_store_badge.png" onclick="javascript:sendGaEvent('send','event','Downloads','android','header')"></a>
                             <!-- /END BUTTONS -->
 
                         </div>
@@ -161,11 +211,11 @@
                             <!-- <h5 class="intro">메리유</h5> -->
 
                             <div stype="margin-top:20px">
-                                <a href="#" target="_blank"></a><img src="assets/images/app_store_badge.png" alt=""></a>
+                                <a href="#" target="_blank"><img src="assets/images/app_store_badge.png" onclick="javascript:sendGaEvent('send','event','Downloads','ios','header')"></a>
                             </div>
                             <br />
                             <div>
-                                <a href="#" target="_blank"><img src="assets/images/play_store_badge.png" alt=""></a>
+                                <a href="#" target="_blank"><img src="assets/images/play_store_badge.png" onclick="javascript:sendGaEvent('send','event','Downloads','android','header')"></a>
                             </div>
                             <!-- /END BUTTONS -->
 
@@ -346,96 +396,102 @@
               <!-- SCREENSHOT HEADING -->
               <h3 class="purple-text">결혼 계획 입력</h3>
 
-              <!-- SCREENSHOT DESCRIPTION -->
-              <p class="grey-text">
-                내게 필요한 준비 항목<br />간편하게 입력하세요
-              </p>
+                <!-- SCREENSHOT DESCRIPTION -->
+                <p class="grey-text">
+                    내게 필요한 준비 항목
+                    <br />간편하게 입력하세요
+                </p>
             </div>
             <div class="col-md-4 wow fadeInRight animated animated" data-wow-offset="10" data-wow-duration="1.5s" style="visibility: visible;-webkit-animation-duration: 1.5s; -moz-animation-duration: 1.5s; animation-duration: 1.5s;">
-            <div class="phone-image">
-                <img src="assets/images/two.png" alt="">
-            </div>
-            <!-- SCREENSHOT HEADING -->
-            <h3 class="purple-text">상담제안 비교 선택</h3>
-
-            <!-- SCREENSHOT DESCRIPTION -->
-            <p class="grey-text">
-              한번에 최대 8명의<br />웨딩 컨설턴트 제안을 받아보세요
-            </p>
-          </div>
-          <div class="col-md-4 wow fadeInRight animated animated" data-wow-offset="10" data-wow-duration="1.5s" style="visibility: visible;-webkit-animation-duration: 1.5s; -moz-animation-duration: 1.5s; animation-duration: 1.5s;">
-          <div class="phone-image">
-              <img src="assets/images/three.png" alt="">
-          </div>
-          <!-- SCREENSHOT HEADING -->
-          <h3 class="purple-text">실제 후기 확인</h3>
-
-          <!-- SCREENSHOT DESCRIPTION -->
-          <p class="grey-text">
-            상담 후 작성된 솔직한<br />후기 및 만족도를 확인해보세요
-          </p>
-        </div>
-
-            </div>
-
-            <div class="row hidden-md hidden-lg visible-sm-block visible-xs-block">
-              <div id="app_preview_xs" class="owl-carousel">
-                <div class="wow fadeInRight animated animated" data-wow-offset="10" data-wow-duration="1.5s" style="visibility: visible;-webkit-animation-duration: 1.5s; -moz-animation-duration: 1.5s; animation-duration: 1.5s;">
-                <div class="phone-image-xs">
-                    <img src="assets/images/one.png" alt="">
+                <div class="phone-image">
+                    <img src="assets/images/two.png" alt="">
                 </div>
                 <!-- SCREENSHOT HEADING -->
-                <h2 class="purple-text">결혼 계획 입력</h2>
+                <h3 class="purple-text">상담제안 비교 선택</h3>
 
                 <!-- SCREENSHOT DESCRIPTION -->
                 <p class="grey-text">
-                  내게 필요한 준비 항목<br />간편하게 입력하세요
+                    한번에 최대 8명의
+                    <br />웨딩 컨설턴트 제안을 받아보세요
                 </p>
-              </div>
-              <div class="wow fadeInRight animated animated" data-wow-offset="10" data-wow-duration="1.5s" style="visibility: visible;-webkit-animation-duration: 1.5s; -moz-animation-duration: 1.5s; animation-duration: 1.5s;">
-              <div class="phone-image-xs">
-                  <img src="assets/images/two.png" alt="">
-              </div>
-              <!-- SCREENSHOT HEADING -->
-              <h2 class="purple-text">상담제안 비교 선택</h2>
-
-              <!-- SCREENSHOT DESCRIPTION -->
-              <p class="grey-text">
-                한번에 최대 8명의<br />웨딩 컨설턴트 제안을 받아보세요
-              </p>
             </div>
-            <div class="wow fadeInRight animated animated" data-wow-offset="10" data-wow-duration="1.5s" style="visibility: visible;-webkit-animation-duration: 1.5s; -moz-animation-duration: 1.5s; animation-duration: 1.5s;">
-            <div class="phone-image-xs">
-                <img src="assets/images/three.png" alt="">
+            <div class="col-md-4 wow fadeInRight animated animated" data-wow-offset="10" data-wow-duration="1.5s" style="visibility: visible;-webkit-animation-duration: 1.5s; -moz-animation-duration: 1.5s; animation-duration: 1.5s;">
+                <div class="phone-image">
+                    <img src="assets/images/three.png" alt="">
+                </div>
+                <!-- SCREENSHOT HEADING -->
+                <h3 class="purple-text">실제 후기 확인</h3>
+
+                <!-- SCREENSHOT DESCRIPTION -->
+                <p class="grey-text">
+                    상담 후 작성된 솔직한
+                    <br />후기 및 만족도를 확인해보세요
+                </p>
             </div>
-            <!-- SCREENSHOT HEADING -->
-            <h2 class="purple-text">실제 후기 확인</h2>
 
-            <!-- SCREENSHOT DESCRIPTION -->
-            <p class="grey-text">
-              상담 후 작성된 솔직한<br />후기 및 만족도를 확인해보세요
-            </p>
-          </div>
-              </div>
+        </div>
 
-		</div>
-		<!-- /END CONTAINER -->
+        <div class="row hidden-md hidden-lg visible-sm-block visible-xs-block">
+            <div id="app_preview_xs" class="owl-carousel">
+                <div class="wow fadeInRight animated animated" data-wow-offset="10" data-wow-duration="1.5s" style="visibility: visible;-webkit-animation-duration: 1.5s; -moz-animation-duration: 1.5s; animation-duration: 1.5s;">
+                    <div class="phone-image-xs">
+                        <img src="assets/images/one.png" alt="">
+                    </div>
+                    <!-- SCREENSHOT HEADING -->
+                    <h2 class="purple-text">결혼 계획 입력</h2>
 
-	</section>
-	<!-- /END SECTION -->
+                    <!-- SCREENSHOT DESCRIPTION -->
+                    <p class="grey-text">
+                        내게 필요한 준비 항목
+                        <br />간편하게 입력하세요
+                    </p>
+                </div>
+                <div class="wow fadeInRight animated animated" data-wow-offset="10" data-wow-duration="1.5s" style="visibility: visible;-webkit-animation-duration: 1.5s; -moz-animation-duration: 1.5s; animation-duration: 1.5s;">
+                    <div class="phone-image-xs">
+                        <img src="assets/images/two.png" alt="">
+                    </div>
+                    <!-- SCREENSHOT HEADING -->
+                    <h2 class="purple-text">상담제안 비교 선택</h2>
 
-  <!-- =========================
+                    <!-- SCREENSHOT DESCRIPTION -->
+                    <p class="grey-text">
+                        한번에 최대 8명의
+                        <br />웨딩 컨설턴트 제안을 받아보세요
+                    </p>
+                </div>
+                <div class="wow fadeInRight animated animated" data-wow-offset="10" data-wow-duration="1.5s" style="visibility: visible;-webkit-animation-duration: 1.5s; -moz-animation-duration: 1.5s; animation-duration: 1.5s;">
+                    <div class="phone-image-xs">
+                        <img src="assets/images/three.png" alt="">
+                    </div>
+                    <!-- SCREENSHOT HEADING -->
+                    <h2 class="purple-text">실제 후기 확인</h2>
+
+                    <!-- SCREENSHOT DESCRIPTION -->
+                    <p class="grey-text">
+                        상담 후 작성된 솔직한
+                        <br />후기 및 만족도를 확인해보세요
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <!-- /END CONTAINER -->
+
+    </section>
+    <!-- /END SECTION -->
+
+    <!-- =========================
    PARTNERS
 ============================== -->
-  <section class="services grey-bg" id="partners">
+    <section class="services grey-bg" id="partners">
 
-    <div class="container">
+        <div class="container">
 
-        <!-- SECTION HEADER -->
-        <div class="section-header wow fadeIn animated animated" data-wow-offset="10" data-wow-duration="1.5s" style="visibility: visible;-webkit-animation-duration: 1.5s; -moz-animation-duration: 1.5s; animation-duration: 1.5s;">
+            <!-- SECTION HEADER -->
+            <div class="section-header wow fadeIn animated animated" data-wow-offset="10" data-wow-duration="1.5s" style="visibility: visible;-webkit-animation-duration: 1.5s; -moz-animation-duration: 1.5s; animation-duration: 1.5s;">
 
-            <!-- SECTION TITLE -->
-            <h3 class="dark-text">메리유의 신뢰할 수 있는 전국 최고의 웨딩 파트너</h2>
+                <!-- SECTION TITLE -->
+                <h3 class="dark-text">메리유의 신뢰할 수 있는 전국 최고의 웨딩 파트너</h2>
               <div class="colored-line">
               </div>
         </div>
@@ -447,12 +503,7 @@
           <div class="col-md-4 single-service wow fadeIn animated animated" data-wow-offset="10" data-wow-duration="1.5s" style="visibility: visible;-webkit-animation-duration: 1.5s; -moz-animation-duration: 1.5s; animation-duration: 1.5s;">
 
               <!-- SERVICE HEADING -->
-              <img src="assets/images/partner01.png" / style="height:80px">
-
-              <!-- SERVICE DESCRIPTION -->
-              <p>
-                성혼회원수 33,824명, 결혼정보업계 최초 소비자중심경영 CCM인증 획득
-              </p>
+              <img src="assets/images/partner05.png" / style="height:80px">
 
           </div>
           <!-- /END SINGLE SERVICE -->
@@ -461,12 +512,7 @@
           <div class="col-md-4 single-service wow fadeIn animated animated" data-wow-offset="10" data-wow-duration="1.5s" style="visibility: visible;-webkit-animation-duration: 1.5s; -moz-animation-duration: 1.5s; animation-duration: 1.5s;">
 
             <!-- SERVICE HEADING -->
-            <img src="assets/images/partner02.png" / style="height:80px">
-
-            <!-- SERVICE DESCRIPTION -->
-            <p>
-              성혼회원수 33,824명, 결혼정보업계 최초 소비자중심경영 CCM인증 획득
-            </p>
+            <img src="assets/images/partner08.png" / style="height:80px">
 
           </div>
           <!-- /END SINGLE SERVICE -->
@@ -475,12 +521,7 @@
           <div class="col-md-4 single-service wow fadeIn animated animated" data-wow-offset="10" data-wow-duration="1.5s" style="visibility: visible;-webkit-animation-duration: 1.5s; -moz-animation-duration: 1.5s; animation-duration: 1.5s;">
 
             <!-- SERVICE HEADING -->
-            <img src="assets/images/partner03.png" / style="height:80px">
-
-            <!-- SERVICE DESCRIPTION -->
-            <p>
-              성혼회원수 33,824명, 결혼정보업계 최초 소비자중심경영 CCM인증 획득
-            </p>
+            <img src="assets/images/partner01.png" / style="height:80px">
 
           </div>
           <!-- /END SINGLE SERVICE -->
@@ -495,12 +536,7 @@
           <div class="col-md-4 single-service wow fadeIn animated animated" data-wow-offset="10" data-wow-duration="1.5s" style="visibility: visible;-webkit-animation-duration: 1.5s; -moz-animation-duration: 1.5s; animation-duration: 1.5s;">
 
               <!-- SERVICE HEADING -->
-              <img src="assets/images/partner04.png" / style="height:80px">
-
-              <!-- SERVICE DESCRIPTION -->
-              <p>
-                성혼회원수 33,824명, 결혼정보업계 최초 소비자중심경영 CCM인증 획득
-              </p>
+              <img src="assets/images/partner02.png" / style="height:80px">
 
           </div>
           <!-- /END SINGLE SERVICE -->
@@ -509,12 +545,7 @@
           <div class="col-md-4 single-service wow fadeIn animated animated" data-wow-offset="10" data-wow-duration="1.5s" style="visibility: visible;-webkit-animation-duration: 1.5s; -moz-animation-duration: 1.5s; animation-duration: 1.5s;">
 
             <!-- SERVICE HEADING -->
-            <img src="assets/images/partner05.png" / style="height:80px">
-
-            <!-- SERVICE DESCRIPTION -->
-            <p>
-              성혼회원수 33,824명, 결혼정보업계 최초 소비자중심경영 CCM인증 획득
-            </p>
+            <img src="assets/images/partner03.png" / style="height:80px">
 
           </div>
           <!-- /END SINGLE SERVICE -->
@@ -523,12 +554,7 @@
           <div class="col-md-4 single-service wow fadeIn animated animated" data-wow-offset="10" data-wow-duration="1.5s" style="visibility: visible;-webkit-animation-duration: 1.5s; -moz-animation-duration: 1.5s; animation-duration: 1.5s;">
 
             <!-- SERVICE HEADING -->
-            <img src="assets/images/partner06.png" / style="height:80px">
-
-            <!-- SERVICE DESCRIPTION -->
-            <p>
-              성혼회원수 33,824명, 결혼정보업계 최초 소비자중심경영 CCM인증 획득
-            </p>
+            <img src="assets/images/partner04.png" / style="height:80px">
 
           </div>
           <!-- /END SINGLE SERVICE -->
@@ -543,13 +569,7 @@
           <div class="col-md-4 single-service wow fadeIn animated animated" data-wow-offset="10" data-wow-duration="1.5s" style="visibility: visible;-webkit-animation-duration: 1.5s; -moz-animation-duration: 1.5s; animation-duration: 1.5s;">
 
               <!-- SERVICE HEADING -->
-              <img src="assets/images/partner07.png" / style="height:80px">
-
-              <!-- SERVICE DESCRIPTION -->
-              <p>
-                성혼회원수 33,824명, 결혼정보업계 최초 소비자중심경영 CCM인증 획득
-              </p>
-
+              <img src="assets/images/partner06.png" / style="height:80px">
           </div>
           <!-- /END SINGLE SERVICE -->
 
@@ -557,12 +577,7 @@
           <div class="col-md-4 single-service wow fadeIn animated animated" data-wow-offset="10" data-wow-duration="1.5s" style="visibility: visible;-webkit-animation-duration: 1.5s; -moz-animation-duration: 1.5s; animation-duration: 1.5s;">
 
             <!-- SERVICE HEADING -->
-            <img src="assets/images/partner08.png" / style="height:80px">
-
-            <!-- SERVICE DESCRIPTION -->
-            <p>
-              성혼회원수 33,824명, 결혼정보업계 최초 소비자중심경영 CCM인증 획득
-            </p>
+            <img src="assets/images/partner07.png" / style="height:80px">
 
           </div>
           <!-- /END SINGLE SERVICE -->
@@ -572,12 +587,6 @@
 
             <!-- SERVICE HEADING -->
             <img src="assets/images/partner09.png" / style="height:80px">
-
-            <!-- SERVICE DESCRIPTION -->
-            <p>
-              성혼회원수 33,824명, 결혼정보업계 최초 소비자중심경영 CCM인증 획득
-            </p>
-
           </div>
           <!-- /END SINGLE SERVICE -->
 
@@ -608,44 +617,44 @@
 
           <!-- SECTION TITLE -->
             <h3 class="dark-text">최고의 순간을 위한 선택의 시작, 메리유</h3>
-            <div class="colored-line">
-            </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-
-          <!-- CONTACT BUTTONS AREA -->
-          <div class="download-container">
-
-                <!-- BUTTONS MD UP -->
-                <div class="buttons wow fadeInRight animated animated hidden-sm hidden-xs visible-md-block visible-lg-block" data-wow-offset="10" data-wow-duration="1.5s" style="visibility: visible;-webkit-animation-duration: 1.5s; -moz-animation-duration: 1.5s; animation-duration: 1.5s;">
-
-                    <a href="#" target="_blank"></a><img src="assets/images/app_store_badge_black.png" alt=""></a>
-                    <a href="#" target="_blank"><img src="assets/images/play_store_badge_black.png" alt=""></a>
-
+                <div class="colored-line">
                 </div>
-                <!-- /END BUTTONS MD DOWN-->
-                <div class="buttons wow fadeInRight animated animated hidden-md hidden-lg visible-sm-block visible-xs-block" data-wow-offset="10" data-wow-duration="1.5s" style="visibility: visible;-webkit-animation-duration: 1.5s; -moz-animation-duration: 1.5s; animation-duration: 1.5s;">
+            </div>
 
-                    <div>
-                        <a href="#" target="_blank"></a><img src="assets/images/app_store_badge_black.png" alt=""></a>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+
+                    <!-- CONTACT BUTTONS AREA -->
+                    <div class="download-container">
+
+                        <!-- BUTTONS MD UP -->
+                        <div class="buttons wow fadeInRight animated animated hidden-sm hidden-xs visible-md-block visible-lg-block" data-wow-offset="10" data-wow-duration="1.5s" style="visibility: visible;-webkit-animation-duration: 1.5s; -moz-animation-duration: 1.5s; animation-duration: 1.5s;">
+
+                            <a href="#" target="_blank"><img src="assets/images/app_store_badge_black.png" onclick="javascript:sendGaEvent('send','event','Downloads','ios','footer')"></a>
+                            <a href="#" target="_blank"><img src="assets/images/play_store_badge_black.png" onclick="javascript:sendGaEvent('send','event','Downloads','android','footer')"></a>
+
+                        </div>
+                        <!-- /END BUTTONS MD DOWN-->
+                        <div class="buttons wow fadeInRight animated animated hidden-md hidden-lg visible-sm-block visible-xs-block" data-wow-offset="10" data-wow-duration="1.5s" style="visibility: visible;-webkit-animation-duration: 1.5s; -moz-animation-duration: 1.5s; animation-duration: 1.5s;">
+
+                            <div>
+                                <a href="#" target="_blank"><img src="assets/images/app_store_badge_black.png" onclick="javascript:sendGaEvent('send','event','Downloads','ios','footer')"></a>
+                            </div>
+                            <br />
+                            <div>
+                                <a href="#" target="_blank"><img src="assets/images/play_store_badge_black.png" onclick="javascript:sendGaEvent('send','event','Downloads','android','footer')"></a>
+                            </div>
+
+
+                        </div>
+
                     </div>
-                    <br />
-                    <div>
-                        <a href="#" target="_blank"><img src="assets/images/play_store_badge_black.png" alt=""></a>
-                    </div>
-
-
+                    <!-- END OF DOWNLOAD BUTTONS AREA -->
                 </div>
+                <!-- END COLUMN -->
 
             </div>
-            <!-- END OF DOWNLOAD BUTTONS AREA -->
-        </div>
-        <!-- END COLUMN -->
-
-        </div>
-        <!-- END ROW -->
+            <!-- END ROW -->
 
         </div>
         <!-- /END CONTAINER -->
@@ -709,12 +718,11 @@
 
                 <!-- COPYRIGHT TEXT -->
                 <p class="copyright">
-                    COMPANY 메리유 ㅣ BUSINESS 880-01-00306 l OWNER 조재익ㅣ ADDRESS 서울시 강남구 역삼로180
-                    <br />EMAIL : help@marryyou.co.kr ㅣ TEL : 070-7655-1500
-                    <br /><a href="terms.html" class="copyright" target="_blank">서비스이용약관</a> ㅣ <a href="policy.html" class="copyright" target="_blank">개인정보취급방침</a> ㅣ <a href="faq_user.html" class="copyright" target="_blank">고객문의</a>
-                </p>
-                <p class="copyright">
-                    PHOTO BY 801224RYOHAN
+                    COMPANY 메리유 | BUSINESS 880-01-00306 | OWNER 조재익 | ADDRESS 서울시 강남구 역삼로180
+                    <br />EMAIL : help@marryyou.co.kr | TEL : 070-7655-1500
+                    <br /><a href="terms.html" class="copyright" target="_blank">서비스이용약관</a> | <a href="policy.html" class="copyright" target="_blank">개인정보취급방침</a> | <a href="faq_user.html" class="copyright" target="_blank">고객문의</a>
+                    <br />
+                    <br /> PHOTO BY <a href="http://801224.com/" target="_blank" class="copyright" style="font-weight:normal; cursor: default;">801224.com</a>
                 </p>
 
             </div>
@@ -749,6 +757,8 @@
             $("#app_preview_xs").owlCarousel();
 
         });
+
+
     </script>
 
 </body>

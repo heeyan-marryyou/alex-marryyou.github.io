@@ -11,7 +11,7 @@ html {
 
 body {
     background: #ffffff;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Lane', hevetica;
     font-size: 16px;
     font-weight: 300;
     color: #313131;
@@ -99,8 +99,7 @@ li {
     position: absolute;
     left: 50%;
     top: 50%;
-    background-image: url(http://demo.templateocean.com/premium/template/kane/files/images/loading.gif);
-    /*TODO : CHANGE LOADING TO LOCAL*/
+    background-image: url(../assets/images/loading.gif);
     background-repeat: no-repeat;
     background-position: center;
     -webkit-background-size: cover;
@@ -115,8 +114,7 @@ li {
 /* FONT FACE LOADER */
 @font-face {
     font-family: 'Lane';
-    src: url('../fonts/lanenar_Lane.eot');
-    src: url('../fonts/lanenar_Lane.eot?#iefix') format('embedded-opentype'), url('../fonts/lanenar_Lane.woff') format('woff'), url('../fonts/lanenar_Lane.ttf') format('truetype'), url('../fonts/lanenar_Lane.svg#Lane') format('svg');
+    src: url('../assets/fonts/lanenar_Lane.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -125,7 +123,7 @@ li {
 
     @font-face {
         font-family: 'Lane';
-        src: url('../fonts/lanenar_Lane.svg#Lane') format('svg');
+        src: url('../assets/fonts/lanenar_Lane.woff') format('woff');
     }
 }
 
@@ -133,7 +131,6 @@ li {
 
 h1,
 h2 {
-    font-family: 'Lane', sans-serif;
     font-weight: normal;
 }
 
