@@ -11,7 +11,7 @@ html {
 
 body {
     background: #ffffff;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Lane', hevetica;
     font-size: 16px;
     font-weight: 300;
     color: #313131;
@@ -99,7 +99,7 @@ li {
     position: absolute;
     left: 50%;
     top: 50%;
-    background-image: url(http://demo.templateocean.com/premium/template/kane/files/images/loading.gif);
+    background-image: url(../assets/images/loading.gif);
     background-repeat: no-repeat;
     background-position: center;
     -webkit-background-size: cover;
@@ -114,8 +114,7 @@ li {
 /* FONT FACE LOADER */
 @font-face {
     font-family: 'Lane';
-    src: url('../fonts/lanenar_Lane.eot');
-    src: url('../fonts/lanenar_Lane.eot?#iefix') format('embedded-opentype'), url('../fonts/lanenar_Lane.woff') format('woff'), url('../fonts/lanenar_Lane.ttf') format('truetype'), url('../fonts/lanenar_Lane.svg#Lane') format('svg');
+    src: url('../assets/fonts/lanenar_Lane.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -124,7 +123,7 @@ li {
 
     @font-face {
         font-family: 'Lane';
-        src: url('../fonts/lanenar_Lane.svg#Lane') format('svg');
+        src: url('../assets/fonts/lanenar_Lane.woff') format('woff');
     }
 }
 
@@ -132,7 +131,6 @@ li {
 
 h1,
 h2 {
-    font-family: 'Lane', sans-serif;
     font-weight: normal;
 }
 
@@ -173,7 +171,7 @@ h5 {
     font-weight: 400 !important;
     border-radius: 4px !important;
     text-shadow: 0 !important;
-    color: #ffffff;
+    color: #FFFFFF;
     min-width: 150px;
     border: none;
     padding: 16px 25px 16px 25px;
@@ -193,6 +191,41 @@ h5 {
     font-size: 20px;
 }
 
+/* FAQ */
+.faq-button,
+.faq-button2 {
+    font-size: 14px;
+    font-weight: 400 !important;
+    border-radius: 4px !important;
+    text-shadow: 0 !important;
+    color: #777;
+    min-width: 70px;
+    border-radius: 2px;
+    border-color: #ddd;
+    margin-top: 3px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin-bottom: 3px;
+    padding-right: 3px;
+    padding-left: 3px;
+    margin-right: 1px;
+    margin-left: 1px;
+
+    -webkit-transition: all ease 0.25s;
+            transition: all ease 0.25s;
+}
+
+.faq-button:hover,
+.faq-button2:hover {
+    border: none;
+}
+
+.faq-button i,
+.faq-button2 i {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
 
 /*---------------------------------------
    TEXTS
@@ -206,10 +239,29 @@ h5 {
     color: #272727;
 }
 
+.purple-text {
+  color: #8C91FF;
+}
+
 .grey-bg {
     background: #F7F8FA !important;
 }
+/* main color bg */
+.light-purple-bg {
+    background: #8C91FF !important;
+}
+/* TODO: 색상 받은거 color bg */
+.dark-purple-bg {
+    background: #7C81EF !important;
+}
 
+.float-left {
+  text-align: left;
+}
+
+.text-margin {
+  margin-bottom: 40px;
+}
 
 /*---------------------------------------
    SECTIONS
@@ -275,7 +327,7 @@ header {
 }
 
 header .color-overlay {
-    min-height: 900px;
+    min-height: 680px;
 }
 
 header .full-screen {
@@ -284,6 +336,86 @@ header .full-screen {
 }
 
 /* TOP BAR WITH NAVIGATION */
+
+/* navbar */
+.navbar {
+    -webkit-box-shadow: 0 1px 2px #CCC;
+    -moz-box-shadow: 0 1px 2px #CCC;
+    box-shadow: 0 1px 2px #CCC;
+}
+
+.navbar-default {
+    background-color: #FFFFFF;
+    border-color: #FFFFFF;
+    /* 8C91FF */
+}
+/* title */
+.navbar-default .navbar-brand {
+    color: #8C91FF;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #8C91FF;
+}
+/* link */
+.navbar-default .navbar-nav > li > a {
+    color: #8C91FF;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #8C91FF;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #8C91FF;
+    background-color: #FFFFFF;
+    /* 8C91FF */
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #8C91FF;
+    background-color: #FFFFFF;
+    /* 8C91FF */
+}
+/* caret */
+.navbar-default .navbar-nav > .dropdown > a .caret {
+    border-top-color: #8C91FF;
+    border-bottom-color: #8C91FF;
+}
+.navbar-default .navbar-nav > .dropdown > a:hover .caret,
+.navbar-default .navbar-nav > .dropdown > a:focus .caret {
+    border-top-color: #8C91FF;
+    border-bottom-color: #8C91FF;
+}
+.navbar-default .navbar-nav > .open > a .caret,
+.navbar-default .navbar-nav > .open > a:hover .caret,
+.navbar-default .navbar-nav > .open > a:focus .caret {
+    border-top-color: #8C91FF;
+    border-bottom-color: #8C91FF;
+}
+/* mobile version */
+.navbar-default .navbar-toggle {
+    border-color: #8C91FF;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #FFFFFF;
+    /* 8C91FF */
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #8C91FF;
+}
+@media (max-width: 767px) {
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #8C91FF;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #8C91FF;
+    }
+}
 
 /*.sticky-navigation {
   min-height: 60px;
@@ -370,12 +502,17 @@ header .intro-section .buttons {
     margin-top: 35px;
 }
 
+header .intro-section .intro-xs-padding-top {
+    color: #ffffff;
+    padding-top: 30px;
+}
+
 /*---------------------------------------
    SECTION:  FEATURES
 -----------------------------------------*/
 
 .features {
-    padding-top: 80px;
+    padding-top: 60px;
     padding-bottom: 30px;
     background: #ffffff;
 }
@@ -442,7 +579,7 @@ header .intro-section .buttons {
 -----------------------------------------*/
 
 .app-brief {
-    padding-top: 110px;
+    padding-top: 60px;
     padding-bottom: 60px;
 }
 
@@ -457,6 +594,16 @@ header .intro-section .buttons {
 }
 
 .app-brief .phone-image img {
+    width: 100%;
+}
+
+.app-brief .phone-image-xs {
+    max-width: 200px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.app-brief .phone-image-xs img {
     width: 100%;
 }
 
@@ -485,23 +632,55 @@ header .intro-section .buttons {
     vertical-align: inherit;
 }
 
+/*---------------------------------------
+   SECTION:  POINTS
+-----------------------------------------*/
+
+.point {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #ffffff;
+    /* 2016.09.25 added */
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.point .single-point {
+    /*padding-bottom: 60px;*/
+}
+
+.point .single-point .point-icon {
+    /*font-size: 80px;*/
+    font-size: 30px;
+}
+
+.point .single-point h3 {
+    margin-top: 20px;
+}
+
+
 
 /*---------------------------------------
    SECTION:  SERVICES
 -----------------------------------------*/
 
 .services {
-    padding-top: 80px;
+    padding-top: 60px;
     padding-bottom: 60px;
     background: #ffffff;
+    /* 2016.09.25 added */
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .services .single-service {
-    padding-bottom: 60px;
+    /*padding-bottom: 60px;*/
+    padding-bottom: 30px;
 }
 
 .services .single-service .service-icon {
-    font-size: 80px;
+    /*font-size: 80px;*/
+    font-size: 30px;
 }
 
 .services .single-service h3 {
@@ -521,8 +700,8 @@ header .intro-section .buttons {
 }
 
 .download .color-overlay {
-    padding-top: 110px;
-    padding-bottom: 70px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 .download .download-container {
